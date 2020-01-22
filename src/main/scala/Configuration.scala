@@ -9,14 +9,15 @@ import scala.collection.JavaConverters._
  */
 class Configuration(config: Config) extends Serializable {
 
-    val string = config.getString("string")
-    val int_number = config.getInt("int_number")
+    val env = config.getString("env")
+    val app_db = config.getString("mdev_db")
+    val data_db = config.getString("serving_db")
 
-    val float_number = config.getDouble("float_number")
-    val formatted_string = config.getString("formatted_string")
+    val kudu_uri = config.getString("kudu.master")
+    val kudu_prefix = config.getString("kudu.prefix")
 
-    val map_number = config.getInt("map.number")
-    val map_string = config.getString("map.string")
-    val map_long_string = config.getString("map.long_string")
+    val table1 = config.getString("kudu.tables.project")
+    val table2 = config.getString("kudu.tables.mapping")
+    val table3 = config.getString("kudu.tables.logs")
 
 }

@@ -22,13 +22,14 @@ object ConfigTypesTest {
 
         // Business logic
 
-        System.out.println(settings.string)
-        System.out.println(settings.int_number)
-        System.out.println(settings.float_number)
-        System.out.println(settings.formatted_string)
-        System.out.println(settings.map_number)
-        System.out.println(settings.map_string)
-        System.out.println(settings.map_long_string)
+        System.out.println("Environment: " + settings.env)
+        System.out.println("Application DB: " + settings.app_db)
+        System.out.println("Serving DB: " + settings.data_db)
+        System.out.println("DB URI: " + settings.kudu_uri)
+        System.out.println("DB Table Prefix: " + settings.kudu_prefix)
+        System.out.println("Table 1: " + settings.table1)
+        System.out.println("Table 2: " + settings.table2)
+        System.out.println("Table 3: " + settings.table3)
 
         spark.stop()
 
