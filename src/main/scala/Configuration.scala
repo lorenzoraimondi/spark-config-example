@@ -12,7 +12,7 @@ class Configuration(config: Config) extends Serializable {
     val string = config.getString("string")
     val int_number = config.getInt("int_number")
 
-    val float_number = config.getFloat("float_number")
+    val float_number = config.getDouble("float_number")
     val formatted_string = config.getString("formatted_string")
 
     val map_number = config.getInt("map.number")
